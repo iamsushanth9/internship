@@ -1,12 +1,13 @@
 import React from "react";
 import ladderImg from "../assets/ladder.png";
+import heroBackground from "../assets/hero_background.avif"; // Import the new background image
 
 export default function Hero() {
   return (
     <section
       className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center relative"
       style={{
-        background: "#f7f8fa",
+        background: `url(${heroBackground}) no-repeat center center / cover`, // Set the background image
       }}
     >
       {/* Left: Text */}
