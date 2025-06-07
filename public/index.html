@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="MENA Support Service Limited Website" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>MENA Support Service Limited</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+      /* Initial Loader Styles */
+      .initial-app-loader-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #ffffff; /* Or your app's background */
+        font-family: 'Inter', sans-serif; /* Use a font similar to your app */
+      }
+      .initial-app-loader-logo { /* If using an image */
+        width: 80px;
+        height: 80px;
+        animation: initial-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      @keyframes initial-pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: .5; }
+      }
+      .initial-app-loader-text {
+        margin-top: 1.25rem; /* Roughly mt-5 in Tailwind */
+        font-size: 1.125rem; /* Roughly text-lg in Tailwind */
+        color: #374151; /* Roughly text-gray-700 */
+        font-weight: 600; /* Roughly font-semibold */
+      }
+      .initial-spinner {
+        width: 48px; /* w-12 */
+        height: 48px; /* h-12 */
+        border: 5px solid rgba(0, 0, 0, 0.1); /* Lighter border */
+        border-left-color: #2563EB; /* Example: Blue-600 from Tailwind */
+        border-radius: 50%;
+        animation: initial-spin 1s linear infinite;
+      }
+      @keyframes initial-spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <!-- This is what users see BEFORE React loads -->
+      <div class="initial-app-loader-container">
+        <!-- Option 1: Using your logo image (place your logo in the 'public' folder) -->
+        <!-- <img src="%PUBLIC_URL%/mena-logo.svg" alt="Loading MENA Support Service Limited" class="initial-app-loader-logo"/> -->
+
+        <!-- Option 2: Using a CSS spinner (default if logo is not used) -->
+        <div class="initial-spinner"></div>
+        <p class="initial-app-loader-text">Loading MENA Support Service Limited...</p>
+      </div>
+    </div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
