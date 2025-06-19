@@ -10,18 +10,22 @@ const cards = [
   {
     title: "Manpower Consultancy & Recruitment Services",
     desc: "Connecting skilled professionals to top employers worldwide.",
+    img: require("../assets/manpower.png"),
   },
   {
     title: "Outsourcing ",
     desc: "Empowering companies to optimize operations.",
+    img: require("../assets/outsourcing.jpg"),
   },
   {
     title: "Specialist Services",
     desc: "Modernize applications, servers and storage to integrate with hybrid cloud and AI.",
+    img: require("../assets/specialist.png"),
   },
   {
     title: "HR Life Support Services",
     desc: " Supporting on-site employee well-being.",
+    img: require("../assets/life.png"),
   }
 ];
 
@@ -153,7 +157,7 @@ export default function About() {
               <div key={idx} className="bg-white shadow-md rounded-lg p-6 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
                   <img
-                    src={item.img || "placeholder.png"} // Replace with actual image paths
+                    src={item.img}
                     alt={item.title}
                     className="w-10 h-10 object-contain"
                     draggable={false}
