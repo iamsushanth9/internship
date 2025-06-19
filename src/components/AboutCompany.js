@@ -122,9 +122,11 @@ export default function AboutCompany() {
               />
             )}
             {activeTab === "about" && (
-              <div className="bg-gray-200 rounded-lg flex items-center justify-center w-72 h-48 md:w-80 md:h-56">
-                <span className="text-gray-400 text-5xl">🖼️</span>
-              </div>
+              <img
+                src={require("../assets/ourrr.jpg")}
+                alt="Our Team"
+                className="rounded-lg shadow-md w-full h-auto object-cover"
+              />
             )}
           </div>
         </div>
