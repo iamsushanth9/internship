@@ -53,68 +53,86 @@ export default function ShipRepairing() {
   // Section content
   const sectionContent = {
     about: (
-      <div className="flex flex-col md:flex-row items-center">
-        <div className="w-full md:w-1/3 flex justify-center mb-4 md:mb-0">
-          <img
-            src={sectionImages.about}
-            alt="About"
-            className="w-[420px] h-[320px] object-contain"
-            onError={(e) => {
-              e.target.style.display = "none";
-            }}
-          />
-        </div>
-        <div className="w-full md:w-2/3">
-          <h2
-            className="text-xl font-bold mb-2"
+      <div className="grid grid-cols-1 gap-12">
+        {/* About Card with image on the left */}
+        <div className="bg-white shadow-md rounded-lg p-6 flex flex-col sm:flex-row items-center" style={{ background: "#f5f6fa" }}>
+          <div
+            className="flex-shrink-0"
             style={{
-              color: "#ff4500",
-              fontSize: "clamp(1.5rem,4vw,2.2rem)",
-              fontFamily: "Baufra, sans-serif",
+              width: "520px",
+              height: "340px",
+              marginBottom: "1.5rem",
+              marginRight: "2rem",
+              borderRadius: "12px",
+              overflow: "hidden",
+              background: "#e5e7eb",
+              boxShadow: "0 2px 8px rgba(34,197,94,0.08)"
             }}
           >
-            About
-          </h2>
-          <p className="mb-4">
-            With over 25 years of experience in the Marine Industry, MENA Ship
-            Repairing Division undertakes and executes repair/refit works on board
-            Tankers, Chemical Tankers, LPG Carriers, Seismic Vessels, Bulk
-            Carriers, AHTS, Offshore Work-cum-Supply Vessel, Accommodation Barges,
-            Floating Cranes, Container Vessels, and Cruise liners.
-          </p>
-          <p className="mb-4">
-            With an excellent track record of repairing more than 130 vessels at
-            Port, Dry Dock and On Voyage, we have established a reputation in the
-            marine industry for our commitment to excellence, encompassing quality
-            standards, timely delivery, reliability, and cost efficient project
-            management.
-          </p>
-          <p className="mb-4">
-            Our experience means we have the expertise to undertake specialist
-            repair/refit work, new building work, maintenance by refined methods &
-            latest engineering techniques and class specifications for the entire
-            range of:
-          </p>
-          <ul className="list-disc ml-6 mb-4">
-            <li>Steel - Hull Repair</li>
-            <li>Mechanical - Piping - Renewal and new construction</li>
-            <li>Electrical</li>
-            <li>Instrumentation & Control</li>
-            <li>Navigational equipment</li>
-            <li>
-              Corrosion Management Blasting & Painting: Grit & Ultra High Pressure
-              Hydro Blasting
-            </li>
-            <li>Tank Cleaning</li>
-            <li>Slop removal and disposal</li>
-            <li>Underwater - Works and repairs</li>
-            <li>NDT Services</li>
-            <li>A/C & Ventilation</li>
-            <li>Dry Docking</li>
-            <li>Offshore Construction</li>
-            <li>Hydraulic Piping</li>
-            <li>Crane Repair</li>
-          </ul>
+            <img
+              src={require("../assets/ship_rep1.avif")}
+              alt="About"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block"
+              }}
+              draggable={false}
+            />
+          </div>
+          <div className="flex-1 text-left">
+            <h2
+              style={{
+                color: "#ff4500",
+                fontWeight: 700,
+                fontSize: "2.5rem",
+              }}
+            >
+              About
+            </h2>
+            <p className="mt-2 mb-4 text-gray-800">
+              With over 25 years of experience in the Marine Industry, MENA Ship
+              Repairing Division undertakes and executes repair/refit works on
+              board Tankers, Chemical Tankers, LPG Carriers, Seismic Vessels,
+              Bulk Carriers, AHTS, Offshore Work-cum-Supply Vessel,
+              Accommodation Barges, Floating Cranes, Container Vessels, and Cruise
+              liners.
+            </p>
+            <p className="mb-4 text-gray-800">
+              With an excellent track record of repairing more than 130 vessels at
+              Port, Dry Dock and On Voyage, we have established a reputation in
+              the marine industry for our commitment to excellence, encompassing
+              quality standards, timely delivery, reliability, and cost efficient
+              project management.
+            </p>
+            <p className="mb-2 text-gray-800">
+              Our experience means we have the expertise to undertake specialist
+              repair/refit work, new building work, maintenance by refined methods
+              & latest engineering techniques and class specifications for the
+              entire range of:
+            </p>
+            <ul className="list-disc ml-6 text-gray-700">
+              <li>Steel - Hull Repair</li>
+              <li>Mechanical - Piping - Renewal and new construction</li>
+              <li>Electrical</li>
+              <li>Instrumentation & Control</li>
+              <li>Navigational equipment</li>
+              <li>
+                Corrosion Management Blasting & Painting: Grit & Ultra High Pressure
+                Hydro Blasting
+              </li>
+              <li>Tank Cleaning</li>
+              <li>Slop removal and disposal</li>
+              <li>Underwater - Works and repairs</li>
+              <li>NDT Services</li>
+              <li>A/C & Ventilation</li>
+              <li>Dry Docking</li>
+              <li>Offshore Construction</li>
+              <li>Hydraulic Piping</li>
+              <li>Crane Repair</li>
+            </ul>
+          </div>
         </div>
       </div>
     ),
@@ -142,7 +160,7 @@ export default function ShipRepairing() {
             Services Offered
           </h2>
           <p className="mb-2 font-semibold">OUR SERVICES</p>
-          <p className="mb-4">
+          <p className="mb-4 text-gray-800">
             The expertise and skills of our technical crew and riding squads,
             coupled with our well equipped facilities, enhance the quality of
             services offered to our clients in the repairing of Main Engine,
