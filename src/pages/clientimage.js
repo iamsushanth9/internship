@@ -68,13 +68,25 @@ export default function OurClients() {
           {currentImages.map((image, index) => (
             <div
               key={startIdx + index}
-              className="bg-white p-2 rounded-lg shadow hover:shadow-lg transition duration-300"
-              style={{ boxShadow: "0 0 0 4px #22c55e33, 0 4px 6px rgba(34,197,94,0.2)" }} // green shadow
+              className="bg-white p-2 rounded-lg shadow hover:shadow-lg transition duration-300 flex items-center justify-center"
+              style={{
+                minHeight: 120,
+                height: "120px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
             >
               <img
                 src={image.default ? image.default : image}
                 alt={`Company ${startIdx + index + 1}`}
-                className="w-full h-auto object-contain"
+                className="object-contain max-h-full max-w-full"
+                style={{
+                  display: "block",
+                  margin: "auto",
+                  maxHeight: "100%",
+                  maxWidth: "100%",
+                }}
               />
             </div>
           ))}
